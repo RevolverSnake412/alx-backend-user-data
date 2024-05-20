@@ -31,3 +31,10 @@ def unauthorized() -> str:
     Trigger an unauthorized error for testing
     """
     abort(401)
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def forbidden() -> str:
+    """ GET /api/v1/forbidden
+    Trigger a forbidden error for testing
+    """
+    abort(403)
